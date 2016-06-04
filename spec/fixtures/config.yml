@@ -1,0 +1,4 @@
+sid: sessionid
+csrftoken: csrf
+playlist_name: playlist
+links_path: "spec/fixtures/links.txt"

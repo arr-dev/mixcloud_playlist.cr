@@ -16,7 +16,11 @@ TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
+Build:
+
+```sh
+crystal build src/main.cr
+```
 
 ## Contributing
 
