@@ -1,4 +1,2 @@
-sid: sessionid
-csrftoken: csrf
-playlist_name: playlist
+access_token: "TOKEN"
 links_path: "spec/fixtures/links.txt"

@@ -5,9 +5,7 @@ module MixcloudPlaylist
     getter links : (Array(String))?
 
     YAML.mapping({
-      sid: String,
-      csrftoken: String,
-      playlist_name: String,
+      access_token: String,
       links_path: String
     })
 
@@ -18,9 +16,7 @@ module MixcloudPlaylist
     end
 
     def initialize(attributes)
-      @sid = attributes[:sid]
-      @csrftoken = attributes[:csrftoken]
-      @playlist_name = attributes[:playlist_name]
+      @access_token = attributes[:access_token]
       @links_path = attributes[:links_path]
     end
 
