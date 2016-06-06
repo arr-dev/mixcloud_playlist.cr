@@ -17,6 +17,13 @@ module MixcloudPlaylist
       end
     end
 
+    def initialize(attributes)
+      @sid = attributes[:sid]
+      @csrftoken = attributes[:csrftoken]
+      @playlist_name = attributes[:playlist_name]
+      @links_path = attributes[:links_path]
+    end
+
     def load_links
       @links = File.read_lines(links_path).map(&.strip)
     end

@@ -5,3 +5,8 @@ authors:
   - nenadpet <nenad.petronijevic86@gmail.com>
 
 license: MIT
+
+development_dependencies:
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
