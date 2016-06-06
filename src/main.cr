@@ -1,3 +1,3 @@
 require "./mixcloud_playlist"
 
-MixcloudPlaylist::Cli.run
+MixcloudPlaylist::Cli.run(ARGV)

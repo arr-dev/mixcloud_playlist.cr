@@ -10,9 +10,7 @@ module MixcloudPlaylist
     })
 
     def self.load(path) : self
-      from_yaml(File.read(path)).tap do |c|
-        c.load_links
-      end
+      from_yaml(File.read(path))
     end
 
     def initialize(attributes)
@@ -20,8 +18,8 @@ module MixcloudPlaylist
       @links_path = attributes[:links_path]
     end
 
-    def load_links
-      @links = File.read_lines(links_path).map(&.strip)
+    def links
+      @links ||= File.read_lines(links_path).map(&.strip)
     end
   end
 end

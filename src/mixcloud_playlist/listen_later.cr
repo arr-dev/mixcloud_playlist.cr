@@ -1,3 +1,5 @@
+require "json"
+
 module MixcloudPlaylist
   class ListenLater
     property :access_token
