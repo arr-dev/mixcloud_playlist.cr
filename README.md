@@ -15,7 +15,7 @@ make all
 ## Usage
 
 Configure app with `YAML` file containing keys:
-- `access_token` - Mixcloud API Access Token,
+- `access_token` - [Mixcloud API Access Token](https://www.mixcloud.com/developers/#authorization),
 - `links_path` - path to lists of cloudcasts links
 
 Call with `mixcloud_playlist ./filename.yml`
