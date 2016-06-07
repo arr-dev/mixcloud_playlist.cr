@@ -1,4 +1,4 @@
-# mixcloud_playlist
+# mixcloud_playlist [![Build Status](https://travis-ci.org/arr-dev/mixcloud_playlist.cr.svg?branch=master)](https://travis-ci.org/arr-dev/mixcloud_playlist.cr)
 
 Adds Mixcloud cloudcasts to "Listen Later" list.
 
