@@ -1,4 +1,6 @@
 require "json"
+require "http/client"
+require "uri"
 
 module MixcloudPlaylist
   class ListenLater

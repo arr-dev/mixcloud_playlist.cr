@@ -1,6 +1,11 @@
 module MixcloudPlaylist
   class Cli
     def self.run(args)
+      if args.empty?
+        puts "No config file given"
+        return false
+      end
+
       config = Config.load(args[0])
 
       listen_later = ListenLater.new(config.access_token)

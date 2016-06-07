@@ -1,6 +1,9 @@
+require "http/client"
+
 module MixcloudPlaylist
   class LinkResolver
     def initialize(@url : String)
+      @count = 0
     end
 
     def resolve
@@ -8,14 +11,19 @@ module MixcloudPlaylist
     end
 
     private def resolve_url(url)
-      response = HTTP::Client.get(url)
+      response = HTTP::Client.head(url)
 
       case response.status_code
       when 200
         url
       when 302
-        url = response.headers["Location"]
-        resolve_url(url)
+        location = response.headers["Location"]
+        if location.starts_with?("/")
+          uri = URI.parse(url)
+          resolve_url("#{uri.scheme}://#{uri.host}#{location}")
+        else
+          resolve_url(location)
+        end
       else
         puts "ERROR:"
         puts url
