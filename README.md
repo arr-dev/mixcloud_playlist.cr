@@ -16,10 +16,13 @@ TODO: Write usage instructions here
 
 ## Development
 
-Build:
-
 ```sh
-crystal build src/main.cr
+# build
+make build
+# install
+make install
+# build and install
+make all
 ```
 
 ## Contributing
