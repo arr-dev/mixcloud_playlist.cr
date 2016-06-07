@@ -1,20 +1,8 @@
 # mixcloud_playlist
 
-TODO: Write a description here
+Adds Mixcloud cloudcasts to "Listen Later" list.
 
 ## Installation
-
-
-TODO: Write installation instructions here
-
-
-## Usage
-
-
-
-TODO: Write usage instructions here
-
-## Development
 
 ```sh
 # build
@@ -24,10 +12,23 @@ make install
 # build and install
 make all
 ```
+## Usage
+
+Configure app with `YAML` file containing keys:
+- `access_token` - Mixcloud API Access Token,
+- `links_path` - path to lists of cloudcasts links
+
+Call with `mixcloud_playlist ./filename.yml`
+
+## Development
+
+```sh
+crystal spec
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/mixcloud_playlist/fork )
+1. Fork it ( https://github.com/arr-dev/mixcloud_playlist.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -35,4 +36,4 @@ make all
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) nenadpet - creator, maintainer
+- [[arr-dev]](https://github.com/arr-dev) nenadpet - creator, maintainer
